@@ -16,21 +16,19 @@ function Home() {
             I'm a Computer Science Student
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium aliquam architecto dicta eius exercitationem magnam modi
-            nisi nostrum quod tempore? Expedita maxime nemo repudiandae
-            suscipit. Error facere natus numquam rerum.
+            Computer Science student passionate about software development. I
+            love stargazing and enjoy spending time with myself.
           </p>
         </div>
         <div className="flex flex-row gap-4">
           <a href="https://www.facebook.com/ttwrpz" target="_blank">
-            <IconBrandFacebook class="size-8 transition hover:scale-105" />
+            <IconBrandFacebook className="size-8 transition hover:scale-105" />
           </a>
           <a href="https://www.instagram.com/ttwrpz" target="_blank">
-            <IconBrandInstagram class="size-8 transition hover:scale-105" />
+            <IconBrandInstagram className="size-8 transition hover:scale-105" />
           </a>
           <a href="mailto:theerawat.patt@kmutt.ac.th" target="_blank">
-            <IconMail class="size-8 transition hover:scale-105" />
+            <IconMail className="size-8 transition hover:scale-105" />
           </a>
         </div>
         <a className="cursor-pointer rounded bg-green-800 px-4 py-2 text-white transition hover:scale-105">
@@ -41,7 +39,7 @@ function Home() {
         <img
           src="/images/profile.jpg"
           alt="Theerawat Patthawee"
-          className="object-fit rounded transition hover:scale-105"
+          className="object-fit mx-auto w-full max-w-sm rounded transition hover:scale-105"
         />
       </div>
     </section>

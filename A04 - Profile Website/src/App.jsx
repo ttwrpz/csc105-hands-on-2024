@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./page/Home.jsx";
 import AboutMe from "./page/AboutMe.jsx";
 import Gallery from "./page/Gallery.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
         <AboutMe />
         <Gallery />
       </div>
-      <footer className="bg-gray-50 px-2 py-4 text-center font-mono">
-        &copy; 2025 Theerawat Patthawee
-      </footer>
+      <Footer />
     </div>
   );
 }

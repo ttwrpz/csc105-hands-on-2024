@@ -1,3 +1,4 @@
 packages:
-  - "A02 - Shopping List App"
-  - "A03 - Simplest Calculator App"
+  - "A**"
+  - "!**/dist"
+  - "!**/build"

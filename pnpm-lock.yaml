@@ -189,7 +189,7 @@ importers:
         specifier: ^6.2.0
         version: 6.2.0(jiti@2.4.2)(lightningcss@1.29.1)
 
-  A04 - Responsive Page:
+  A04 - Profile Website:
     dependencies:
       '@tabler/icons-react':
         specifier: ^3.31.0
