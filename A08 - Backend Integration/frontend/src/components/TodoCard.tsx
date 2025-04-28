@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Todo} from "../App.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import {Button} from "@/components/ui/button.tsx";
@@ -82,7 +82,7 @@ function TodoCard({
     }
 
     return (
-        <Card className="flex flex-row justify-between gap-4 px-4">
+        <Card className="flex flex-col md:flex-row justify-between gap-4 px-4">
             <div className="flex flex-col gap-4">
                 <h1>{item.name}</h1>
                 <div className="flex flex-rows gap-4">
@@ -94,15 +94,20 @@ function TodoCard({
                     )}
                 </div>
             </div>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row flex-wrap gap-4">
                 {isEdited ? (
                     <Input className="border" placeholder="Type the new name" onChange={(e) => setEditedValue(e.target.value)}/>
                 ) : null}
-                <Button className="" onClick={() => handleOnEdit(item.id)}>Edit</Button>
-                <Button variant="secondary" className=""
-                        onClick={() => handleOnMarkAsComplete(item.id)}>Mark as Complete
+                <Button className="max-md:flex-1" onClick={() => handleOnEdit(item.id)}>Edit</Button>
+                <Button className="max-md:w-full max-md:flex-1"
+                        variant="secondary"
+                        onClick={() => handleOnMarkAsComplete(item.id)}
+                >Mark as Complete
                 </Button>
-                <Button variant="destructive" onClick={() => handleOnDelete(item.id)}>Delete
+                <Button className="max-md:flex-1"
+                        variant="destructive"
+                        onClick={() => handleOnDelete(item.id)}
+                >Delete
                 </Button>
             </div>
         </Card>

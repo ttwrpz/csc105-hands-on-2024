@@ -2,6 +2,7 @@ import TodoCard from "./components/TodoCard.tsx";
 import {useEffect, useState} from "react";
 import {Button} from "@/components/ui/button.tsx";
 import {Axios} from "@/lib/axiosInstance.ts";
+import { Card } from "@/components/ui/card.tsx";
 
 export type Todo = {
     id: number;
@@ -55,7 +56,7 @@ function App() {
     }, []);
 
     return (
-        <div className="max-w-3xl mx-auto min-h-svh flex flex-col gap-4 items-center justify-center w-full">
+        <div className="max-w-3xl mx-auto min-h-svh flex flex-col gap-4 items-center justify-center w-full py-4 px-4">
             <div className="flex flex-row items-center justify-between w-full gap-4">
                 <h1 className="text-xl font-bold">Todo App</h1>
                 <Button size="lg" onClick={handleOnAdd}>Add</Button>
@@ -65,6 +66,11 @@ function App() {
                     <TodoCard key={item.id} item={item} fetchTodos={fetchTodos}
                     />
                 ))}
+              {todos.length === 0 && (
+                <Card className="text-center">
+                  There are currently no active items in the to-do list.
+                </Card>
+              )}
             </div>
         </div>
     )

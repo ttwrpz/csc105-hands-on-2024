@@ -35,7 +35,9 @@
     ],
     "onlyBuiltDependencies": [
       "@prisma/client",
-      "esbuild"
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
     ]
   }
 }

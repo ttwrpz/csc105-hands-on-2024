@@ -1,4 +1,6 @@
 packages:
   - "A**"
+  - "A**/frontend"
+  - "A**/backend"
   - "!**/dist"
   - "!**/build"
